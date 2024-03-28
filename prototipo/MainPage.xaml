@@ -2,30 +2,40 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="prototipo.MainPage"
-            Shell.NavBarIsVisible="false"/>
+            Shell.NavBarIsVisible="false">
        
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+    <Grid>
+      <Image Source="golden.png"
+             Aspect="AspectFill"/>
 
-            <Image
-                Source="golden.png"
-               Aspect="AspectFill"
-                HorizontalOptions="Center"/>
+        
+          <Label Text="Seja bem vindo"
+                 
+                 FontSize="45"
+                 HorizontalTextAlignment="Center"
+                 VerticalOptions="Center"
+                 TextColor="Black"
+                 Margin="0,0,0,350"/>
+        
+      <VerticalStackLayout
+            VerticalOptions="End"
+            Spacing="10"
+            Margin="20,0,20,45">
 
-            <Label
-                Text="OPSSSS"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Button Text="hehe"
-                x:Name="haha"
-                Clicked="botao1"
-                Color="Blue"
-                HorizontalOptions="Center"/>
+      <Button Text="Iniciar"
+              Clicked="botao1"
+              
+              Margin="0,0,0,14"
+              BorderColor="White"
+              BorderWidth="1"
+              HeightRequest="50"
+              CornerRadius="25"
+              BackgroundColor="Transparent"
+              TextColor="White"
+              FontSize="16"/>
+       
 
         </VerticalStackLayout>
-  
-
+     </Grid> 
+     
 </ContentPage>

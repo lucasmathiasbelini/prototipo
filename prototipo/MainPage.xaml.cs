@@ -1,16 +1,15 @@
-﻿namespace prototipo;
-
-public partial class MainPage :
+﻿namespace prototipo
 {
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+        }
 
-	public MainPage()
-	{
-		
-	}
-	void botao1(object sender, EventArgs args) {
-		
-		
-	}
-
+        void botao1(object sender, EventArgs args) 
+        {
+           
+        }
+    }
 }
-

@@ -1,6 +1,8 @@
-﻿namespace prototipo;
+﻿using Microsoft.Maui.Controls;
 
-public partial class AppShell : 
+namespace prototipo;
+
+public partial class AppShell : Shell
 {
 	public AppShell()
 	{
