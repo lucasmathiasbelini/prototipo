@@ -5,11 +5,14 @@
             Shell.NavBarIsVisible="false">
        
     <Grid>
-      <Image Source="golden.png"
+      <Image x:name = "hehe"
+      Source="https://img.freepik.com/premium-vector/rain-jungle-forest-landscape-ai-generated-8bit-pixel-art-game-background-2d-pixelated-adventure-level-rainforest-scene-gaming-location-with-lush-tropical-greenery-wild-plants-vintage-style_8071-54756.jpg"
              Aspect="AspectFill"/>
 
-        
-          <Label Text="Seja bem vindo"
+        <Image Source= "shaco.png"/>
+
+
+          <Label Text=""
                  
                  FontSize="45"
                  HorizontalTextAlignment="Center"
@@ -25,7 +28,7 @@
       <Button Text="Iniciar"
               Clicked="botao1"
               
-              Margin="0,0,0,14"
+             Margin="67,0,0,150"
               BorderColor="White"
               BorderWidth="1"
               HeightRequest="50"
