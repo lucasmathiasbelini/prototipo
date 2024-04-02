@@ -6,7 +6,7 @@
        
     <Grid>
       <Image x:name = "hehe"
-      Source="https://img.freepik.com/premium-vector/rain-jungle-forest-landscape-ai-generated-8bit-pixel-art-game-background-2d-pixelated-adventure-level-rainforest-scene-gaming-location-with-lush-tropical-greenery-wild-plants-vintage-style_8071-54756.jpg"
+      Source=""
              Aspect="AspectFill"/>
 
         <Image Source= "shaco.png"/>
