@@ -1,10 +1,11 @@
-namespace shaco.cs
+namespace prototipo 
 {
-    public class Shaco : Personagem 
+    public class FilhoShaco : Shaco 
     {
-        public Shaco() 
+        public FilhoShaco() 
         {
-            this.Imagem = "shaco.png"; 
+            Imagem = "shaco.png"; 
+           
         }
     }
 }

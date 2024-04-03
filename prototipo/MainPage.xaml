@@ -5,11 +5,17 @@
             Shell.NavBarIsVisible="false">
        
     <Grid>
+<ProgressBar
+BackgroundColor="Black"
+
+/>
       <Image x:name = "hehe"
-      Source=""
+      Source="pixel.jpg"
              Aspect="AspectFill"/>
 
-        <Image Source= "shaco.png"/>
+        <Image Source= "top.gif"
+          Margin="0,270,0,0"
+        />
 
 
           <Label Text=""
@@ -22,21 +28,22 @@
         
       <VerticalStackLayout
             VerticalOptions="End"
-            Spacing="10"
-            Margin="20,0,20,45">
+            Spacing="10"      
+            Margin="20,0,20,45"
+           >
 
-      <Button Text="Iniciar"
+      <ImageButton Source ="yakisoba.png"
               Clicked="botao1"
-              
-             Margin="67,0,0,150"
-              BorderColor="White"
-              BorderWidth="1"
-              HeightRequest="50"
-              CornerRadius="25"
-              BackgroundColor="Transparent"
-              TextColor="White"
-              FontSize="16"/>
-       
+             Margin="300,0,0,50"
+            HeightRequest="120"
+
+  />
+       <ImageButton Source ="morango.webp"
+              Clicked="botao1"
+             Margin="300,0,0,50"
+            HeightRequest="120"
+
+  />
 
         </VerticalStackLayout>
      </Grid> 
