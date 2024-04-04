@@ -2,50 +2,41 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="prototipo.MainPage"
-            Shell.NavBarIsVisible="false">
+             Shell.NavBarIsVisible="false">
        
     <Grid>
-<ProgressBar
-BackgroundColor="Black"
+        <Image x:Name="hehe"
+               Source="pixel.jpg"
+               Aspect="AspectFill"/>
 
-/>
-      <Image x:name = "hehe"
-      Source="pixel.jpg"
-             Aspect="AspectFill"/>
-
-        <Image Source= "top.gif"
-          Margin="0,270,0,0"
-        />
-
-
-          <Label Text=""
-                 
-                 FontSize="45"
-                 HorizontalTextAlignment="Center"
-                 VerticalOptions="Center"
-                 TextColor="Black"
-                 Margin="0,0,0,350"/>
+        <ProgressBar
+            x:Name="progressBar"
+            Progress="0.5"
+            BackgroundColor="Transparent"
+            ProgressColor="Red"
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            WidthRequest="300"
+            HeightRequest="20"/>
         
-      <VerticalStackLayout
-            VerticalOptions="End"
-            Spacing="10"      
-            Margin="20,0,20,45"
-           >
+        <Image Source="top.gif"
+               Margin="0,270,0,0"/>
 
-      <ImageButton Source ="yakisoba.png"
-              Clicked="botao1"
-             Margin="300,0,0,50"
-            HeightRequest="120"
-
-  />
-       <ImageButton Source ="morango.webp"
-              Clicked="botao1"
-             Margin="300,0,0,50"
-            HeightRequest="120"
-
-  />
-
-        </VerticalStackLayout>
-     </Grid> 
-     
+        <Label
+               FontSize="45"
+               HorizontalTextAlignment="Center"
+               VerticalOptions="Center"
+               TextColor="Black"
+               Margin="0,0,0,300"/>
+        
+        <Grid VerticalOptions="Center"     
+              HeightRequest="170"
+              WidthRequest="60"
+              HorizontalOptions="End"
+              BackgroundColor="Transparent">
+           
+            <ImageButton Source="yakisoba.png"/>
+            <ImageButton Source="morango.webp"/>
+        </Grid>
+    </Grid>
 </ContentPage>
