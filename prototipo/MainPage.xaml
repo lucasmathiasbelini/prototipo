@@ -35,8 +35,15 @@
               HorizontalOptions="End"
               BackgroundColor="Transparent">
            
-            <ImageButton Source="yakisoba.png"/>
-            <ImageButton Source="morango.webp"/>
+            <ImageButton Source="yakisoba.png"
+            Clicked="botao1"
+            />
+            <ImageButton Source="coracao.webp"
+            Clicked="botao1"
+            />
+            <ImageButton Source="susji"
+            Clicked="botao1"
+            />
         </Grid>
     </Grid>
 </ContentPage>
