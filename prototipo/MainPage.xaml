@@ -1,25 +1,36 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="prototipo.MainPage"
              Shell.NavBarIsVisible="false">
        
     <Grid>
         <Image x:Name="hehe"
-               Source="pixel.jpg"
+               Source="quarto.jpg"
                Aspect="AspectFill"/>
 
         <ProgressBar
             x:Name="progressBar"
             Progress="0.5"
             BackgroundColor="Transparent"
-            ProgressColor="Red"
+            ProgressColor="Yellow"
             VerticalOptions="Start"
             HorizontalOptions="Center"
             WidthRequest="300"
-            HeightRequest="20"/>
-        
-        <Image Source="top.gif"
+            HeightRequest="20"
+            Margin="0,100,0,0"/>
+
+        <ProgressBar
+            x:Name="progressBar2"
+            Progress="0.5"
+            BackgroundColor="Transparent"
+            ProgressColor="Red"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            WidthRequest="300"
+            HeightRequest="20"
+            Margin="0,0,0,350"/>
+
+        <Image Source="fofa.gif"
                Margin="0,270,0,0"/>
 
         <Label
@@ -34,16 +45,19 @@
               WidthRequest="60"
               HorizontalOptions="End"
               BackgroundColor="Transparent">
-           
-            <ImageButton Source="yakisoba.png"
-            Clicked="botao1"
-            />
-            <ImageButton Source="coracao.webp"
-            Clicked="botao1"
-            />
-            <ImageButton Source="susji"
-            Clicked="botao1"
-            />
+           <Frame> 
+
+               <ImageButton Source="arme.webp"
+                            Clicked="botao2"
+                            Margin="0,100,0,0"
+                            Width="100"
+                            Height="100" />
+
+               <ImageButton Source="susji"
+                            Clicked="botao1"
+                            Width="100"
+                            Height="100" />
+           </Frame>
         </Grid>
     </Grid>
 </ContentPage>

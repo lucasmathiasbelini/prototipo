@@ -27,9 +27,15 @@ namespace prototipo
         {
             shaco.SetFome(shaco.GetFome() + 0.1);
             progressBar.Progress = shaco.GetFome();
+            progressBar2.Progress = shaco.GetFome();
         }
 
-        
+          void botao2(object sender, EventArgs args)
+        {
+            shaco.SetFome(shaco.GetFome() + 0.1);
+            progressBar2.Progress = shaco.GetFome();
+        }
+
 
         void PassouTempo()
         {
