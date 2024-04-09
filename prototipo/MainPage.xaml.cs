@@ -1,45 +1,70 @@
-﻿
-namespace prototipo
+﻿public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public class Personagem
     {
-        Shaco shaco;
-        
+        public double Fome { get; set; }
+        public string ArquivoImagem { get; set; }
 
-        public MainPage()
+        public Personagem(double fome, string arquivoImagem)
         {
-            InitializeComponent();
-
-            shaco = new Shaco();
-            
-            
-            shaco.SetFome(shaco.GetFome()+0.1);
-            progressBar.Progress = shaco.GetFome();
-
-            
-            var timer = Application.Current.Dispatcher.CreateTimer();
-            timer.Interval = TimeSpan.FromSeconds(10); 
-            timer.Tick += (s, e) => PassouTempo(); 
-            timer.Start(); 
+            Fome = fome;
+            ArquivoImagem = arquivoImagem;
         }
 
-          void botao1(object sender, EventArgs args)
+        public void SetFome(double fome)
         {
-            shaco.SetFome(shaco.GetFome() + 0.1);
-            progressBar.Progress = shaco.GetFome();
-            progressBar2.Progress = shaco.GetFome();
+            Fome = fome;
         }
 
-          void botao2(object sender, EventArgs args)
+        public double GetFome()
         {
-            shaco.SetFome(shaco.GetFome() + 0.1);
-            progressBar2.Progress = shaco.GetFome();
+            return Fome;
         }
 
-
-        void PassouTempo()
+        public string GetArquivo()
         {
-            
+            return ArquivoImagem;
         }
     }
+
+    Personagem atual;
+    Personagem personagem1;
+    Personagem personagem2;
+    public MainPage()
+    {
+        InitializeComponent();
+
+        personagem1 = new Personagem(0.0, "caminho_da_imagem1"); 
+        personagem2 = new Personagem(0.0, "caminho_da_imagem2"); 
+        atual = personagem1; 
+
+        
+
+         shaco = new Shaco();
+        
+        shaco.SetFome(shaco.GetFome() + 0.1);
+        
+
+        
+    }
+
+    public void PassouTempo()
+    {
+        var timer = Application.Current.Dispatcher.CreateTimer();
+        timer.Interval = TimeSpan.FromSeconds(10); 
+        timer.Tick += (s, e) => PassouTempo(); 
+        timer.Start(); 
+    }
+
+   
+
+    void BotaoFome(object sender, EventArgs args)
+    {
+       atual.SetFome(atual.GetFome() + 0.1);
+    }
+
+   
 }
+
+   
+

@@ -31,6 +31,7 @@
             Margin="0,0,0,350"/>
 
         <Image Source="fofa.gif"
+               x:Name="ImagemPersonagem" 
                Margin="0,270,0,0"/>
 
         <Label
@@ -48,13 +49,13 @@
            <Frame> 
 
                <ImageButton Source="arme.webp"
-                            Clicked="botao2"
+                            Clicked="BotaoSede"
                             Margin="0,100,0,0"
                             Width="100"
                             Height="100" />
 
-               <ImageButton Source="susji"
-                            Clicked="botao1"
+               <ImageButton Source="susji.png"
+                            Clicked="BotaoFome"
                             Width="100"
                             Height="100" />
            </Frame>
