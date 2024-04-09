@@ -30,35 +30,70 @@
             HeightRequest="20"
             Margin="0,0,0,350"/>
 
-        <Image Source="fofa.gif"
+        <Image 
                x:Name="ImagemPersonagem" 
                Margin="0,270,0,0"/>
+
 
         <Label
                FontSize="45"
                HorizontalTextAlignment="Center"
                VerticalOptions="Center"
                TextColor="Black"
-               Margin="0,0,0,300"/>
+               Margin="0,0,0,350"/>
         
-        <Grid VerticalOptions="Center"     
+        <Frame HeightRequest="200" HorizontalOptions="End"> 
+        <Grid> 
+
+      <Grid.RowDefinitions>
+             <RowDefinition Height="30"/>
+             <RowDefinition Height="*"/>
+             <RowDefinition Height="50"/>           
+           </Grid.RowDefinitions>
+           <Grid.ColumnDefinitions>
+             <ColumnDefinition Width="*"/>
+             <ColumnDefinition Width="*"/>
+             <ColumnDefinition Width="*"/>
+             <ColumnDefinition Width="*"/>
+           </Grid.ColumnDefinitions>
+  
+
+
+           <Label
+                VerticalOptions="Center"     
               HeightRequest="170"
               WidthRequest="60"
               HorizontalOptions="End"
-              BackgroundColor="Transparent">
-           <Frame> 
+              BackgroundColor="Transparent"
+              Grid.Row="1"/>
+           
 
                <ImageButton Source="arme.webp"
-                            Clicked="BotaoSede"
+                            Clicked="Botao1"
                             Margin="0,100,0,0"
                             Width="100"
-                            Height="100" />
+                            Height="100"
+                              Grid.Row="2" />
 
                <ImageButton Source="susji.png"
-                            Clicked="BotaoFome"
+                           Clicked="Botao2"
                             Width="100"
-                            Height="100" />
-           </Frame>
+                            Height="100" 
+                            Grid.Row="3"/>
+           
+            <ImageButton Source="arme.webp"
+                            Width="100"
+                            Height="100"/>
+
+                            <Button Text="Trocar de personagem"
+                            x:Name="butaoaaaa"
+                            Clicked="botaotroca"
+                            BackgroundColor="Black"
+                            BorderColor="White"
+                            />
+                            
+
         </Grid>
+        </Frame>
     </Grid>
 </ContentPage>

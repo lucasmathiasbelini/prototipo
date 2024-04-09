@@ -1,70 +1,55 @@
-﻿public partial class MainPage : ContentPage
+﻿using prototipo;
+using Microsoft.Maui.Controls;
+using System;
+
+namespace prototipo;
+
+public partial class MainPage : ContentPage
 {
-    public class Personagem
-    {
-        public double Fome { get; set; }
-        public string ArquivoImagem { get; set; }
-
-        public Personagem(double fome, string arquivoImagem)
-        {
-            Fome = fome;
-            ArquivoImagem = arquivoImagem;
-        }
-
-        public void SetFome(double fome)
-        {
-            Fome = fome;
-        }
-
-        public double GetFome()
-        {
-            return Fome;
-        }
-
-        public string GetArquivo()
-        {
-            return ArquivoImagem;
-        }
-    }
-
+    Shaco shaco; 
+    fofa fofa;
+    top Top;
     Personagem atual;
-    Personagem personagem1;
-    Personagem personagem2;
+//----------------------------------------------------------------------------------------------------------\\
+
     public MainPage()
     {
-        InitializeComponent();
+        InitializeComponent(); 
+        shaco = new Shaco(); 
+        fofa = new fofa();
+        Top = new top();
 
-        personagem1 = new Personagem(0.0, "caminho_da_imagem1"); 
-        personagem2 = new Personagem(0.0, "caminho_da_imagem2"); 
-        atual = personagem1; 
-
-        
-
-         shaco = new Shaco();
-        
-        shaco.SetFome(shaco.GetFome() + 0.1);
-        
-
-        
+        atual = fofa;
     }
 
-    public void PassouTempo()
+    void Botao1(object sender, EventArgs args)
     {
-        var timer = Application.Current.Dispatcher.CreateTimer();
-        timer.Interval = TimeSpan.FromSeconds(10); 
-        timer.Tick += (s, e) => PassouTempo(); 
-        timer.Start(); 
+      progressBar2.Progress = shaco.GetSede() + 0.1;
+       
     }
 
-   
-
-    void BotaoFome(object sender, EventArgs args)
+    void Botao2(object sender, EventArgs args)
     {
-       atual.SetFome(atual.GetFome() + 0.1);
+
+       progressBar.Progress = shaco.GetFome() + 0.1;
+       
+    }
+//----------------------------------------------------------------------------------------------------------\\
+
+    void botaotroca(object sender, EventArgs args)
+    {
+        if (atual == fofa)
+        {
+            atual = Top;
+        }
+        else if (atual == Top)
+        {
+            atual = fofa;
+        }
+
+        ImagemPersonagem.Source = atual.GetArquivo();
     }
 
-   
 }
 
-   
 
