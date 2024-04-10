@@ -20,18 +20,28 @@ public partial class MainPage : ContentPage
         Top = new top();
 
         atual = fofa;
+
+        progressBar2.Progress = atual.GetFome();
+        progressBar.Progress = atual.GetSede();
+
+        var Timer = Application.Current.Dispatcher.CreateTimer();
+    Timer.Interval = TimeSpan.FromSeconds(6);
+    Timer.Tick += (s, e) => passouTempo();
+    Timer.Start();
     }
 
     void Botao1(object sender, EventArgs args)
     {
-      progressBar2.Progress = shaco.GetSede() + 0.1;
-       
+       atual.SetSede(atual.GetSede() + 0.2);
+       progressBar.Progress = atual.GetSede();
+
     }
 
     void Botao2(object sender, EventArgs args)
     {
+        atual.SetFome(atual.GetFome() + 0.2);
+       progressBar2.Progress = atual.GetFome();
 
-       progressBar.Progress = shaco.GetFome() + 0.1;
        
     }
 //----------------------------------------------------------------------------------------------------------\\
@@ -49,6 +59,17 @@ public partial class MainPage : ContentPage
 
         ImagemPersonagem.Source = atual.GetArquivo();
     }
+//---------------------------------------------------------------------------------------------------------------\\
+
+void passouTempo()
+{
+
+        atual.SetFome(atual.GetFome() - 0.2);
+       progressBar2.Progress = atual.GetFome();
+       atual.SetSede(atual.GetSede() - 0.2);
+       progressBar.Progress = atual.GetSede();
+
+}
 
 }
 

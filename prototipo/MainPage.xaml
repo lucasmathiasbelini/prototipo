@@ -12,7 +12,7 @@
             x:Name="progressBar"
             Progress="0.5"
             BackgroundColor="Transparent"
-            ProgressColor="Yellow"
+            ProgressColor="Blue"
             VerticalOptions="Start"
             HorizontalOptions="Center"
             WidthRequest="300"
@@ -21,7 +21,6 @@
 
         <ProgressBar
             x:Name="progressBar2"
-            Progress="0.5"
             BackgroundColor="Transparent"
             ProgressColor="Red"
             VerticalOptions="Center"
@@ -46,8 +45,8 @@
         <Grid> 
 
       <Grid.RowDefinitions>
-             <RowDefinition Height="30"/>
-             <RowDefinition Height="*"/>
+             <RowDefinition Height="50"/>
+             <RowDefinition Height="50"/>
              <RowDefinition Height="50"/>           
            </Grid.RowDefinitions>
            <Grid.ColumnDefinitions>
@@ -57,42 +56,26 @@
              <ColumnDefinition Width="*"/>
            </Grid.ColumnDefinitions>
   
-
-
-           <Label
-                VerticalOptions="Center"     
-              HeightRequest="170"
-              WidthRequest="60"
-              HorizontalOptions="End"
-              BackgroundColor="Transparent"
-              Grid.Row="1"/>
-           
-
-               <ImageButton Source="arme.webp"
-                            Clicked="Botao1"
-                            Margin="0,100,0,0"
+               <ImageButton Source="yakisoba.png"
+                            Clicked="Botao2"
                             Width="100"
                             Height="100"
-                              Grid.Row="2" />
+                            Grid.Row="1"
+                            />
 
-               <ImageButton Source="susji.png"
-                           Clicked="Botao2"
+               <ImageButton Source="chield.jpg"
+                           Clicked="Botao1"
                             Width="100"
                             Height="100" 
-                            Grid.Row="3"/>
-           
-            <ImageButton Source="arme.webp"
-                            Width="100"
-                            Height="100"/>
-
-                            <Button Text="Trocar de personagem"
-                            x:Name="butaoaaaa"
-                            Clicked="botaotroca"
-                            BackgroundColor="Black"
-                            BorderColor="White"
-                            />
-                            
-
+                            Grid.Row="2"/>
+          
+                <Button Text="Trocar de personagem"
+                          x:Name="butaoaaaa"
+                          Clicked="botaotroca"
+                          BackgroundColor="Black"
+                          BorderColor="White"
+                          Grid.Row="0"/>
+  
         </Grid>
         </Frame>
     </Grid>

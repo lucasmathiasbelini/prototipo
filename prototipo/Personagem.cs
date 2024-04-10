@@ -11,7 +11,8 @@ namespace prototipo;
 
         public Personagem()
         {
-
+            Fome = 0.5;
+            Sede = 0.5;
         }
         
 
