@@ -25,7 +25,7 @@ public partial class MainPage : ContentPage
         progressBar.Progress = atual.GetSede();
 
         var Timer = Application.Current.Dispatcher.CreateTimer();
-    Timer.Interval = TimeSpan.FromSeconds(6);
+    Timer.Interval = TimeSpan.FromSeconds(3);
     Timer.Tick += (s, e) => passouTempo();
     Timer.Start();
     }
